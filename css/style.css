@@ -1,4 +1,6 @@
 /*GENERAL*/
+/* Définit les variables de couleurs utilisées dans toute la feuille de style */
+/* Définit les propriétés personnalisées CSS pour les couleurs */
 :root {
   --main-color: #E44444; /* var(--main-color) */
   --second-color: #CD487B; /* var(--second-color) */
@@ -6,35 +8,41 @@
   --drak-grey-color: #4B4B4B; /* var(--drak-grey-color) */
 }
 
+/* Style l'élément body pour centrer le contenu */
 body {
 	margin: 0;
 	display: flex;
 	justify-content: center;
 }
 
+/* Définit la largeur minimale et maximale du conteneur principal */
 .container {
 	min-width: 992px;
 	max-width: 1440px;
 }
 
+/* Style les titres h2 et h3 avec la police Archivo */
 h2, 
 h3 {
 	font-family: 'Archivo', sans-serif;
 	font-style: normal;
 }
 
+/* Centre le texte des titres h2 */
 h2 {
 	text-align: center;
 }
 
 
 /*HEADER*/
+/* Style l'élément header avec position relative et dimensions fixes */
 header {
 	position: relative;
 	width: 100%;
 	height: 880px;
 }
 
+/* Positionne absolument l'image et le contenu texte dans le header */
 header img,
 header .headerTextContent {
 	position: absolute;
@@ -44,16 +52,19 @@ header .headerTextContent {
 	left: 0;
 }
 
+/* Ajuste l'image du header pour couvrir toute la zone */
 header img {
 	object-fit: cover;
 }
 
+/* Centre le contenu texte dans le header */
 header .headerTextContent {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+/* Style le titre h1 avec la police Inter et couleur blanche */
 h1 {
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
@@ -66,11 +77,13 @@ h1 {
 
 
 /*CONTENT*/
+/* Ajoute du padding aux sections */
 section {
 	padding-bottom: 80px;
 	padding-top: 80px;
 }
 
+/* Style spécifique pour les h2 dans le contenu */
 h2
 {
 	font-weight: 900;
@@ -81,6 +94,7 @@ h2
 	margin-top: 0;
 }
 
+/* Style les titres h3 avec couleur noire */
 h3 {
 	font-weight: 800;
 	font-size: 25px;
@@ -89,6 +103,7 @@ h3 {
 	margin-bottom: 0;
 }
 
+/* Style les éléments article avec largeur et flexbox */
 article {
 	width: 15%;
 	margin: 0px 20px;
@@ -96,6 +111,7 @@ article {
 	flex-direction: column;
 }
 
+/* Style les paragraphes avec police et couleur */
 p {
 	font-family: 'Archivo';
 	font-style: normal;
@@ -107,22 +123,26 @@ p {
 
 
 /***************/
+/* Classe pour disposition en ligne centrée */
 .directionRow {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
 
+/* Classe pour disposition en colonne centrée */
 .directionColumn {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+/* Applique un fond dégradé linéaire aux sections */
 .sectionLinearGradientBackground {
 	background: linear-gradient(to right, var(--main-color), var(--second-color));
 }
 
+/* Change la couleur du texte en blanc pour les sections blanches */
 .whiteContentSection h2,
 .whiteContentSection h3,
 .whiteContentSection p {
@@ -130,19 +150,23 @@ p {
 }
 
 /* LS : J'ai ajouté cette propriété pour être en phase avec la maquette */
+/* Supprime les marges des paragraphes dans les sections blanches */
 .whiteContentSection p {
 	margin: 0px;
 }
 
+/* Centre le texte */
 .textCenter {
 	text-align: center;
 }
 
 /***************/
+/* Applique un fond gris clair aux sections */
 .sectionLightGreyBackground {
 	background-color: var(--light-grey-color);
 }
 
+/* Style de base pour les boutons */
 .button {
 	margin: 20px 0px;
 	padding: 28px 40px;
@@ -168,25 +192,30 @@ p {
 	text-decoration: none;
 }
 
+/* Bouton avec couleur gris foncé */
 .buttonDrakGreyColor {
 	color: var(--drak-grey-color);
 	border-color: var(--drak-grey-color);
 }
 
+/* Bouton avec couleur principale */
 .buttonMainColor {
 	color: var(--main-color);
 	border-color: var(--main-color);
 }
 
+/* Bouton avec couleur secondaire */
 .buttonSecondColor {
 	color: var(--second-color);
 	border-color: var(--second-color);
 }
 
+/* Bouton avec bordures arrondies */
 .buttonRounded {
 	border-radius: 39px;
 }
 
+/* Effet au survol pour les boutons mis en évidence */
 .buttonHighlight:hover {
 	font-weight: 800;
 	border-width: 3px;
